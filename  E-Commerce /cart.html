@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h2>hello</h2> -->
+    <p>0</p>
+    <button><a href="checkout.html" target="blank">Checkout</a></button>
+    <div id="container"></div>
+</body>
+</html>
+
+<script>
+
+let cartData = JSON.parse(localStorage.getItem("keycart"));
+console.log(cartData)
+
+
+var total = cartData.reduce(function(sum,ele,index,arr){
+   return sum + Number(ele.price);
+},0);
+
+
+let length = cartData.length;
+
+// console.log(length)
+
+// console.log(total)
+
+document.querySelector("p").innerText = ` you have ${length} items in cart and  total is Rs ${total} `;
+
+cartData.map(function(ele,index){
+
+    let box = document.createElement("div")
+
+    let img = document.createElement("img")
+    img.src = ele.image_url;
+
+    let name = document.createElement("p")
+    name.textContent = ele.name;
+
+    let price = document.createElement("p")
+    price.innerText = ele.price;
+
+    let btn = document.createElement("button")
+    btn.innerText = "Remove";
+    btn.addEventListener('click',() =>{
+        removeItem(ele,index)
+    })
+
+    box.append(img,name,price,btn)
+
+    document.querySelector("#container").append(box)
+
+
+})
+
+function removeItem(ele,index){
+    console.log(ele,index)
+    cartData.splice(index, 1);
+    console.log(cartData)
+    localStorage.setItem("keycart",JSON.stringify(cartData));
+    window.location.reload();
+
+}
+
+
+
+
+
+
+
+</script>
