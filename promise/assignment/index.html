@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <style>
+        #loading_img{
+            text-align: center;
+            margin: auto;
+            margin-right: 20rem;
+        
+        }
+        #show{
+            text-align: right;
+        }
+        input{
+            padding: 5px;
+        }
+        button{
+            padding: 5px;
+        }
+    </style>
+
+    <script src="./index.js" defer></script>
+</head>
+<body>
+    <div>
+        <h2 id="show">please wait for comeing order</h2>
+    </div>
+   <input type="text" id="orderin" placeholder="Order">
+   <button onclick="order()">Order Food</button><br>
+   <img id="loading_img">
+
+</body>
+</html>
