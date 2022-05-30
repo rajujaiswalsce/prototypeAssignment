@@ -1,0 +1,73 @@
+
+body{
+    background-color: darkgrey;
+}
+#navbar{
+display: flex;
+height: 100px;
+width: 95%;
+margin: auto;
+background-image: linear-gradient(160deg, rgb(88, 225, 225), rgb(230, 230, 82));
+border: 3px solid rgb(52, 39, 39);
+border-radius: 15px;
+
+}
+#header{
+display: flex;
+ width: 480px;
+ height: 40px;
+ margin: auto;
+
+
+ gap: 30px;
+}
+#header > input{
+border-radius: 5px;
+background-color: rgb(141, 172, 181);
+width: 240px;
+border-top-right-radius: 1px;
+border-bottom-left-radius: 1px;
+border: 1px solid rgb(165, 22, 125) ;
+color: white;
+font-size: 25px;
+}
+h1{
+color: rgb(209, 63, 0);
+font-size: 50px;
+}
+h3{
+color: white;
+font-size: 20px;
+}
+#header > button{
+/* border-radius: 10px; */
+background-color: teal;
+width: 240px;
+border-top-right-radius: 1px;
+border-bottom-left-radius: 1px;
+border: 1px solid rgb(165, 22, 125) ;
+color: white;
+font-size: 25px;
+}
+#head1 > button:hover{
+background-color: rgb(108, 95, 160);
+}
+#container{
+display: grid;
+grid-template-columns: repeat(2,1fr);
+grid-gap: 25px;
+grid-template-rows: 400px;
+width: 650px;
+margin: auto;
+margin-top: 20px;
+}
+img{
+height: 100%;
+width: 100%;
+}
+#title{
+margin-top: -25px;
+}
+#imgErr{
+    width: 600px;
+}
