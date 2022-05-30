@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar{
+            display: flex;
+            flex-flow: flex-end;
+            justify-content: space-between;
+            width: 300px;
+            margin-left: auto;
+            margin-right: 10px;
+         text-decoration: none;
+        }
+        #items{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+        }
+      img{
+          width: 200px;
+          margin: auto;
+          border-radius: 5px;
+      }
+      #items >div{
+    align-items: center;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.btn2{
+    margin: auto;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <p>Login</p>
+        <p>singUp</p>
+        <p onclick="window.location.href='index.html'">products</p>
+        <p id="go_to_cart" onclick="window.location.href='cart.html'">carts</p>
+  
+    <div id="item_count">
+        <div>
+            <p>0</p>
+        </div>
+    </div>
+</div>
+    <div id="items">
+       
+    </div>
+</body>
+</html>
+<script src="./index.js"></script>
